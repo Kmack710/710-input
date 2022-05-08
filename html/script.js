@@ -9,7 +9,7 @@ const OpenMenu = (data) => {
     $(`.main-wrapper`).fadeIn(0);
 
     let form = [
-        "<form id='qb-input-form'>",
+        "<form id='710-input-form'>",
         `<div class="heading">${ data.header != null ? data.header : "Form Title" }</div>`,
     ];
 
@@ -45,7 +45,7 @@ const OpenMenu = (data) => {
 
     $(".main-wrapper").html(form.join(" "));
 
-    $("#qb-input-form").on("change", function (event) {
+    $("#710-input-form").on("change", function (event) {
         if( $(event.target).attr("type") == 'checkbox' ) {
             const value = $(event.target).is(":checked") ? "true" : "false";
             formInputs[$(event.target).attr("value")] = value;
@@ -54,7 +54,7 @@ const OpenMenu = (data) => {
         }
     });
 
-    $("#qb-input-form").on("submit", async function (event) {
+    $("#710-input-form").on("submit", async function (event) {
         if (event != null) {
             event.preventDefault();
         }
@@ -147,7 +147,7 @@ const renderSelectInput = (item) => {
 
 const CloseMenu = () => {
     $(`.main-wrapper`).fadeOut(0);
-    $("#qb-input-form").remove();
+    $("#710-input-form").remove();
     formInputs = {};
 };
 

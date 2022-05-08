@@ -1,4 +1,4 @@
-# qb-input
+# 710-input
 
 NUI input system for QBCore
 
@@ -10,7 +10,7 @@ Here is an example commant which will create a basic form and will print out it'
 
 ```lua
 RegisterCommand('testinput', function()
-    local dialog = exports['qb-input']:ShowInput({
+    local dialog = exports['710-input']:ShowInput({
         header = "Test",
         submitText = "Bill",
         inputs = {
